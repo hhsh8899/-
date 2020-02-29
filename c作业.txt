@@ -1,0 +1,256 @@
+#include <stdio.h>
+int main(){
+
+int m=0,n=0,x,y;
+printf("请输入总数\n");
+scanf("%d",&n);
+printf("请输入总腿数\n");
+scanf("%d",&m);
+y=(m-2*n)/2;
+x=n-y;
+if(y>=0)
+printf("鸡的数目为%d,腿的数目为%d",x,y);
+else
+printf("no answer\n");
+
+
+
+return 0;
+
+}
+
+
+
+
+
+#include <stdio.h>
+int main(){
+
+char sex,sports,diet;
+double faHeight,moHeight,height;
+printf("请输入父亲身高\n");
+scanf("%f",&faHeight);
+printf("请输入母亲身高\n");
+scanf("%f",&moHeight);
+printf("请输入性别，请输入F或M\n");
+sex=getchar();
+printf("是否喜爱体育锻炼，请输入Y或N\n");
+sports=getchar();
+
+printf("是否有良好的饮食习惯，请输入Y或N\n");
+diet=getchar();
+
+
+if(sex=='F'){
+height=(faHeight*0.923+moHeight)/2;
+  if(sports=='Y'){
+      height=height+height*0.02;
+	  if(diet=='Y')
+		  height=height+height*0.015;
+
+  }
+
+}
+if(sex=='M'){
+height=(faHeight+moHeight)*0.54;
+  if(sports=='Y'){
+      height=height+height*0.02;
+	  if(diet=='Y')
+		  height=height+height*0.015;
+
+  }
+
+}
+
+printf("身高预测为%lfcm\n",height);
+return 0;
+
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int main(){
+int a=0,b=0,sum=0;
+printf("请输入数学成绩");
+scanf("%d",a);
+printf("请输入英语成绩");
+scanf("%d",b);
+if(a>=0&&a<=100&&b>=0&&b<=100){
+
+  sum=(a+b)/10;
+  switch sum
+	  case 
+
+
+
+}else
+  printf("请输入百分制成绩");
+
+return 0;
+
+}
+
+
+
+
+is the person I admire most. He/she once met a…..in his/her life. ….
+
+
+He invented the light bulb, because he want to test what kind of material can suit for the light bulb, 
+he tested thousands of materials, but always failed. But he did not give up  unless get the gole,because of his intelligence 
+and hard work
+he finally find the best meterial for light bulb 
+
+
+
+when he was younth,he was regard as a foolish  by his teather ,because he didn t   good at his home work ,his teacher used to call him 
+stupid.and he Asked to drop out of school. after droping out of school ,he study by himself with his mother. though his hard work ,he 
+finally became the most famous inventor around the word  ,he is so confdent that whatever others regarded him as, he always believe 
+himself
+and constently made Efforts to work   he was not lucky  ,he ususlly met diffecty,once a time he Do the experiments on the train,
+because he was Too much focus on doing the experiment,he Didn't realize  accident arrond him,and Almost caused a fire.
+then  his boss hit him so that his left ear hearing loss,but he still dont give up
+
+
+
+so he/she overcame the problem. 
+I think he/she demonstrates great courage/ determination/ self-confidence in …..
+
+
+scientific  enterprise
+
+
+
+
+#include <iostream.h>
+#include <malloc.h>
+int main(){
+int n,m,i,j,count=0,c=0;
+cout <<"请输入一个数："<<endl;
+cin >>n;
+i=n;
+while(i>0)
+{
+i=i/10;
+  count++;
+}
+c=count*2-1;
+char *s=(char *)malloc(c*sizeof(char));
+j=c;
+s[j]='\0';
+i=n;
+while(i>0)
+{
+	m=i%10;
+   i=i/10;
+  s[j-1]=m+'0';
+  s[j-2]='#';
+  j-=2;
+}
+cout <<s<<endl<<"长度为："<<c<<endl;
+return 0;
+}
+
+
+#include <iostream.h>
+int main(){
+cout<<"请输入年月日"<<endl;
+int year,mounth,day,count=0;
+cin>>year>>mounth>>day;
+for(int i=1;i<mounth;i++){
+switch(i){
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+   count=count+31;
+   break;
+case 4:
+case 6:
+case 9:
+case 11:
+   count=count+30;
+   break;
+case 2:
+	if(year%400==0||(year%4==0&&year%100!=0))
+		count=count+29;
+	else{count=count+28;}
+	break;
+	   }
+}
+count=count+day;
+cout<<"这一天是这一年的第"<<count<<"天";
+return 0;
+}
+
+
+
+The biggest adventure I’ve encountered is making a speech in public
+It happened like this: One day, our school Held an English speech contest
+,I'm a freshman at that time, I have participated in the activities more actively
+I was very ambitious ,I was selected into the finals
+,but , My English pronunciation is not good
+,And there are hundreds of  audience,A dozen professor did the judges
+, because of my poor pronunciation,Judges  made a special impatience
+Seeing this scene ,i feel very unpleasant, feeling a bit of a crash,But I try to normal play, 
+through to the end of the speech
+Then, I finally made it. 
+It was a great accomplishment for me. I felt i get growth.though this event
+This proves my ability, courage, and i have faith in myself
+Judges
+
+How did you make it? How did you feel then? What do you learn from it? 
+
+
+#include <iostream.h>
+int main(){
+cout<<"请输入年月日"<<endl;
+int year,mounth,day;
+cin>>year>>mounth>>day;
+int count=0;
+	if(year<0||mounth<0||day<0||mounth>12||day>31) cout<<"-1"<<endl;
+	else{
+for(int i=1;i<mounth;i++){
+switch(i){
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+   count=count+31;
+   break;
+case 4:
+case 6:
+case 9:
+case 11:
+	if(day>30)  cout<<"-1"<<endl;
+   count=count+30;
+   break;
+case 2:
+	if(year%400==0||(year%4==0&&year%100!=0))
+		count=count+29;
+	else{count=count+28;}
+	break;
+}
+}
+count=count+day;
+cout<<"这一天是这一年的第"<<count<<"天";}
+return 0;
+}
+
+
+
+
+
+

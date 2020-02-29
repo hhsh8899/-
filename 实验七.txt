@@ -1,0 +1,167 @@
+﻿#include <stdio.h>
+
+int main(){
+struct student{
+   int num;
+   char name[30];
+   float math;
+   float computer;
+   float sum;
+ float avg;
+}st[5]={{1,"李毅",88,90},{2,"琳儿",88,89},{3,"张三",88,79},{4,"李四",98,99},{5,"王五",87,99}};
+int i,j;  float temp,a[5];
+for(i=0;i<5;i++){
+     st[i].sum=st[i].math+st[i].computer;
+	 st[i].avg=st[i].sum/2;
+
+     a[i]=st[i].sum;
+}
+
+for(i=0;i<5;i++){
+   for(j=0;j<j-i;j++)
+	   if(a[j]<a[j+1]){
+	      temp=a[j];
+		  a[j]=a[j+1];
+		  a[j+1]=temp;
+	   
+	   }
+
+}
+for(i=0;i<5;i++)
+{printf("%d",a[i]);}
+return 0;
+}
+
+
+
+
+
+
+for(i=0;i<b/2;i++){
+	   printf("%s",(pt+i)->name);
+     for(j=b-1;j>=b/2;j--)
+     {if(((pt+i)->sex!=(pt+j)->sex)&&(pt+j)->flag==0)
+       { printf(" %s\n",(pt+j)->name);
+	    (pt+j)->flag=1;
+        break;}
+   }
+   
+
+   
+   }
+
+
+
+#include <stdio.h>
+struct Student{
+   
+   char name[30];
+  int score;
+   char grade;
+   struct Student * next;
+};
+
+int n;
+
+struct Student * creat(int a){
+   struct Student * head;
+   struct Student * p1,* p2;
+   n=0;
+   p1=p2=(struct Student *)malloc(sizeof(struct Student));
+   scanf("%s,%d",&p1->name,&p1->score);
+   head=NULL;
+   while(n!=a)
+   {  n=n+1;
+       if(n==1) head=p1;
+	   else p2->next=p1;
+	   p2=p1;
+	   p1=(struct Student *)malloc(sizeof(struct Student));
+	    scanf("%s,%d",&p1->name,&p1->score);
+   }
+    p2->next=NULL;
+	return(head);
+}
+void set_grade(struct Student * head){
+   struct Student *p;
+   p=head;
+   if(head!=NULL)
+	   do
+	   {
+	     printf("%s,%s",)
+	   
+	   }
+
+
+
+}
+
+
+int main(){
+   int b;
+   scanf("%d",&b);
+   struct Student * pt;
+   pt=creat();
+return 0;
+}
+
+
+
+
+
+#include  <stdio.h>
+int hour, minute, second; 
+
+struct clock
+{  int hour;
+int minute;
+int second; };
+typedef struct clock CLOCK;
+
+
+
+
+
+
+
+
+void Update(CLOCK *a)                  
+{	a->second++;
+	if (a->second == 60) 	
+	{	a->second = 0;
+		a->minute++;
+	}  
+	if (a->minute == 60)		
+{a->minute = 0;
+		a->hour++;
+	}
+	if (a->hour == 24)	
+{	a->hour = 0;
+	}
+}
+
+void Display(CLOCK *a)	
+{	printf("%2d:%2d:%2d\r",a->hour,a->minute,a->second); 
+}
+
+//函数功能：模拟延迟1秒的时间
+  void Delay(void)                     
+{long	t;
+for (t=0; t<400000000; t++)
+    {    }
+}
+main()
+{long i;
+ 
+   CLOCK rt;
+   CLOCK *timeInfo = *rt;
+   hour = timeInfo->hour;	/*hour,minute,second赋初值*/
+    minute = timeInfo->minute;
+   second = timeInfo->second;
+for (i=0; i<100000; i++)	/*利用循环结构，控制时钟运行的时间*/
+	{ 
+		Update(timeInfo);      				/*时钟更新*/
+		Display(timeInfo);     				/*时间显示*/
+		Delay();       				/*模拟延时1秒*/
+	}    
+}
+
